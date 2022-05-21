@@ -20,7 +20,7 @@ import { LandingComponent } from './landing/landing.component';
 import { StartComponent } from './start/start.component';
 import { IframeWidgetComponent } from './iframe-widget/iframe-widget.component';
 import {DialogModule} from 'primeng/dialog';
-
+import { MatDialogModule } from '@angular/material/dialog'; 
 
 
 @NgModule({
@@ -48,6 +48,7 @@ import {DialogModule} from 'primeng/dialog';
     InputTextModule,
     TooltipModule,
     DialogModule,
+    MatDialogModule,
   ],
   providers: [IframeWidgetComponent],
   bootstrap: [AppComponent]

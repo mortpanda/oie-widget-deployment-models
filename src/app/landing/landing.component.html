@@ -11,7 +11,7 @@
           <p-button label="Hosted Widget" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="signInHosted()"></p-button>
         </div>
         <div class="btnItems">
-          <p-button label="iFrame" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="showModalDialog()"></p-button>
+          <p-button label="iFrame" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="openiFrameModal()"></p-button>
         </div>
         <div class="btnItems">
           <p-button label="Embedded" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="test()"></p-button>
@@ -50,16 +50,16 @@
 </ng-template>
 
 
-<p-dialog header="Header" [(visible)]="displayResponsive" [breakpoints]="{'960px': '75vw'}" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+<!-- <p-dialog header="Header" [(visible)]="displayResponsive" [breakpoints]="{'960px': '75vw'}" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false" >
     <p>
       <app-iframe-widget></app-iframe-widget>
     </p>
-    <!-- <p class="p-m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+     <p class="p-m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
         <ng-template pTemplate="footer">
             <p-button icon="pi pi-check" (click)="displayResponsive=false" label="Yes" class="p-button-text" id="btnModal"btnMain></p-button>
             <p-button icon="pi pi-times" (click)="displayResponsive=false" label="No" id="btnModal"></p-button>
         </ng-template>
-</p-dialog>
+</p-dialog> -->

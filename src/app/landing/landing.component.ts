@@ -9,7 +9,7 @@ import { OktaSDKAuthService } from '../shared/okta/okta-auth.service';
 import { OktaAuth } from '@okta/okta-auth-js'
 import { Router } from '@angular/router';
 import { IframeWidgetComponent } from '../iframe-widget/iframe-widget.component';
-
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-landing',
@@ -32,7 +32,7 @@ export class LandingComponent implements OnInit {
     private OktaSDKAuthService: OktaSDKAuthService,
     private _router: Router,
     private IframeWidgetComponent:IframeWidgetComponent,
-    
+    public _matdialog: MatDialog,
   ) {
     breakpointObserver.observe([
       Breakpoints.XSmall,
@@ -57,13 +57,25 @@ export class LandingComponent implements OnInit {
     alert('test')
   }
 
-  strMyAccessToken;
+
   async signInHosted() {    
       await this.HostedAuthService.closeSession();
       await this.HostedAuthService.signInWithRedirect(); 
   }
 
-  showModalDialog() {
-    this.displayResponsive = true;
-}
+  async openiFrameModal(){
+    await this.HostedAuthService.closeSession();
+    const WidgetDialogConfig = new MatDialogConfig();
+    WidgetDialogConfig.disableClose = false;
+    WidgetDialogConfig.id = "iframe-modal-component";
+    // WidgetDialogConfig.height = "700px";
+    // WidgetDialogConfig.width = "450px";
+    WidgetDialogConfig.width = "80vw";
+    const modalDialog = this._matdialog.open(IframeWidgetComponent, WidgetDialogConfig);
+  }
+
+
+//   showModalDialog() {
+//     this.displayResponsive = true;
+// }
 }
