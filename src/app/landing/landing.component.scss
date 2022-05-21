@@ -10,7 +10,7 @@
 
 .smMainDiv {
   text-align: center!important;
-  margin-top: 100px !important;
+  margin-top: 250px !important;
   height: auto;
   
 }
@@ -70,6 +70,26 @@
   }
 }
 
+#smmainSpeedD{
+  // margin-right: 1vw!important;
+  .p-speeddial{
+    position:relative;
+    .p-speeddial-button.p-button.p-button-icon-only {
+      width: 6rem;
+      height: 6rem;
+      border-width: 5px!important;
+  }
+  }
+}
+
+.smbtn{
+  width: 90%!important;
+}
+
 .mainBanner{
   width: 40vw!important;
+}
+
+.smmainBanner{
+  width:100%!important;
 }

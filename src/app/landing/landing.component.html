@@ -31,13 +31,19 @@
 <!-- ************************* SMALL SCREEN ************************* -->
 <!-- ************************* SMALL SCREEN ************************* -->
 <ng-template [ngIf]="smallScreen" [ngIfElse]="bigScreen">
-  <div class="smMainDiv">
-    <div class="flex justify-content-center flex-wrap card-container  z-5">
-      <!-- <div id="okta-signin-container"></div> -->
+  <div class="smMainDiv" fxLayout="row wrap" fxLayoutAlign="center center">
+
+    
+    <div class="smbtn">
+      <p-speedDial [model]="items" radius="80" type="circle"  showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClassName="p-button-outlined" id="smmainSpeedD"></p-speedDial>
     </div>
-    <div class="mainBtnDiv" fxLayout="row wrap" fxLayoutAlign="center center">
+
+    <div >
+      <img src="assets/img/okta_japan_white_medium.png" class="smmainBanner">
+    </div>
+    <!-- <div class="mainBtnDiv" fxLayout="row wrap" fxLayoutAlign="center center">
       <div class="smbtnItems">
-        <p-button label="Hosted Widget" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="signInHosted()"></p-button>
+        <p-button label="Hosted Widget" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="signInHosted()"></p-button> 
       </div>
       <div class="smbtnItems">
         <p-button label="iFrame" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="showModalDialog()"></p-button>
@@ -48,7 +54,8 @@
       <div class="smbtnItems">
         <p-button label="Embedded SDK" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="test()"></p-button>
       </div>
-    </div>
+    </div> -->
+    
   </div>
 </ng-template>
 
