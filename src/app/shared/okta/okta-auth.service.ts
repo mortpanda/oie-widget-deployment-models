@@ -29,8 +29,20 @@ export class OktaSDKAuthService {
 
     };
 
-    OktaSDKAuthClient = new OktaAuth(this.config);    
+    HostedConfig:OktaAuthOptions = {
+      clientId: this.OktaConfigService.strClientID,
+      issuer: this.OktaConfigService.strIssuer,
+      redirectUri: this.OktaConfigService.strHostedRedirect,
+      postLogoutRedirectUri:this.OktaConfigService.strPostLogoutURL,
+      // responseMode: this.OktaConfigService.strResponseMode,
+      // responseType: this.OktaConfigService.strResponseType,
+      scopes: this.OktaConfigService.strScope,
+      // prompt: this.OktaConfigService.strPrompt,
 
+  };
+
+    OktaSDKAuthClient = new OktaAuth(this.config);    
+    HostedOktaSDKAuthClient = new OktaAuth(this.HostedConfig);    
     
   }
   

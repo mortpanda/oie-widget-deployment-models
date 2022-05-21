@@ -1,9 +1,53 @@
 .lgMainDiv {
   margin-top: 100px !important;
   height: auto !important;
+  z-index: 1!important;
 }
 
 .smMainDiv {
+  text-align: center!important;
   margin-top: 100px !important;
   height: auto;
+  
+}
+
+
+.mainBtnDiv{
+  // border-style: dotted;
+  color:#FFFFFF!important;
+  width:80vw!important;
+   text-align: center!important;
+  
+}
+
+.btnItems{
+  // border-style: dotted;
+  color:#FFFFFF!important;
+  width:25%!important;
+  padding-left:10px!important;
+  padding-right:10px!important;
+}
+
+.smbtnItems{
+  width:100%!important;
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+}
+
+#btnMain{
+  .p-button-lg{
+    width:90%!important;
+    background-color: #00297A!important;
+    border-radius: 5px!important;
+  }
+}
+
+#btnModal{
+  .p-button{
+    background-color: #00297A!important;
+    border-radius: 5px!important;
+    padding: 10px!important;
+    // width:10%!important;
+    // height:100%!important;
+  }
 }

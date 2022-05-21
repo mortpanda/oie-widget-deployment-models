@@ -25,23 +25,23 @@ export class StartComponent implements OnInit {
 
   async ngOnInit() {
     
-    this.strUserSession = await this.authService.isAuthenticated();
-    console.log(this.strUserSession)
-    switch (this.strUserSession == true) {
-      case false:
-        window.location.replace(this.OktaConfigService.strPostLogoutURL);
-      case true:
-        this.strThisUser = await this.authService.token.getUserInfo()
-          .then(function (user) {
-            return user
-          })
-          .catch((err) => {
-            console.log(err);
-            window.location.replace(this.OktaConfigService.strPostLogoutURL);
-           })
-        break;
-    }
-    console.log(this.strThisUser)
+    // this.strUserSession = await this.authService.isAuthenticated();
+    // console.log(this.strUserSession)
+    // switch (this.strUserSession == true) {
+    //   case false:
+    //     window.location.replace(this.OktaConfigService.strPostLogoutURL);
+    //   case true:
+    //     this.strThisUser = await this.authService.token.getUserInfo()
+    //       .then(function (user) {
+    //         return user
+    //       })
+    //       .catch((err) => {
+    //         console.log(err);
+    //         window.location.replace(this.OktaConfigService.strPostLogoutURL);
+    //        })
+    //     break;
+    // }
+    // console.log(this.strThisUser)
 
   }
 

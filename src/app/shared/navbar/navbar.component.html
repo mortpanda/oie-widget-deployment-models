@@ -1,5 +1,5 @@
 <ng-template #bigScreen>
-  <p-toolbar>
+  <p-toolbar id="mainToolbar">
     <div class="p-toolbar-group-left">
       <a class="navbar-brand okta_banner" href="https://okta.com">
         <img src="assets/img/okta_japan_white_medium.png" clas="LGnavbarBanner" width="200px">
@@ -23,7 +23,7 @@
 <!-- ************************* SMALL SCREEN ************************* -->
 <ng-template [ngIf]="smallScreen" [ngIfElse]="bigScreen">
 
-  <p-toolbar class="smToolbar">
+  <p-toolbar id="smToolbar">
     <button type="button" pButton icon="pi pi-bars"  (click)="menu.toggle($event)"></button>
     <!-- <p-menu #menu [popup]="true" [model]="dockItems"></p-menu> -->
     <p-menu #menu [popup]="true" [model]="SmallMenu" ></p-menu>

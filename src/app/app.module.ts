@@ -18,6 +18,8 @@ import {TooltipModule} from 'primeng/tooltip';
 import { FooterComponent } from './shared/footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
 import { StartComponent } from './start/start.component';
+import { IframeWidgetComponent } from './iframe-widget/iframe-widget.component';
+import {DialogModule} from 'primeng/dialog';
 
 
 
@@ -27,7 +29,8 @@ import { StartComponent } from './start/start.component';
     NavbarComponent,
     FooterComponent,
     LandingComponent,
-    StartComponent
+    StartComponent,
+    IframeWidgetComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +47,9 @@ import { StartComponent } from './start/start.component';
     FlexLayoutModule,
     InputTextModule,
     TooltipModule,
-    
+    DialogModule,
   ],
-  providers: [],
+  providers: [IframeWidgetComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
