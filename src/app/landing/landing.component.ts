@@ -10,7 +10,7 @@ import { OktaAuth } from '@okta/okta-auth-js'
 import { Router } from '@angular/router';
 import { IframeWidgetComponent } from '../iframe-widget/iframe-widget.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-
+import { MenuItem, MessageService } from 'primeng/api';
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -24,6 +24,8 @@ export class LandingComponent implements OnInit {
 
   displayModal: boolean;
   displayResponsive:boolean;
+
+  items: MenuItem[];
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -51,6 +53,28 @@ export class LandingComponent implements OnInit {
   async ngOnInit() {
     // await this.OktaWidgetService.CloseWidget();
     // await this.OktaWidgetService.login(this.OktaConfigService.strRedirectURL,true);
+    this.items = [
+      {
+        icon: 'pi pi-external-link',
+        url: 'http://angular.io'
+
+      },
+      {
+        icon: 'pi pi-external-link',
+        url: 'http://angular.io'
+
+      },
+      {
+        icon: 'pi pi-external-link',
+        url: 'http://angular.io'
+
+      },
+      {
+        icon: 'pi pi-external-link',
+        url: 'http://angular.io'
+
+      }
+    ];
   }
 
   test() {

@@ -1,16 +1,15 @@
 <ng-template #bigScreen>
   <div class="lgMainDiv">
-    <div class="flex align-items-center justify-content-center flex-wrap card-container ml-7 z-5">
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
       <!-- <div id="okta-signin-container" class="flex align-items-center justify-content-center flex-wrap card-container ml-7 z-5"></div> -->
-      <div class="flex align-items-center justify-content-center-center ml-4 p-8">
-        <img src="assets/img/okta_japan_white_medium.png" class="mainBanner">
-      </div>
+      
 
       <div class="mainBtnDiv" fxLayout="columns wrap" fxLayoutAlign="center center">
         <div class="btnItems">
-          <p-button label="Hosted Widget" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="signInHosted()"></p-button>
+          <!-- <p-button label="Hosted Widget" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="signInHosted()"></p-button> -->
+          <p-speedDial [model]="items" radius="80" type="circle"  showIcon="pi pi-bars" hideIcon="pi pi-times" buttonClassName="p-button-outlined" id="mainSpeedD"></p-speedDial>
         </div>
-        <div class="btnItems">
+        <!-- <div class="btnItems">
           <p-button label="iFrame" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="openiFrameModal()"></p-button>
         </div>
         <div class="btnItems">
@@ -18,7 +17,11 @@
         </div>
         <div class="btnItems">
           <p-button label="Embedded SDK" icon="pi pi-sign-in" styleClass="p-button-lg" id="btnMain" (onClick)="test()"></p-button>
-        </div>
+        </div> -->
+      </div>
+
+      <div class="flex align-items-center justify-content-center-center ml-4 p-8">
+        <img src="assets/img/okta_japan_white_medium.png" class="mainBanner">
       </div>
 
     </div>

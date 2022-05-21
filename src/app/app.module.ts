@@ -20,7 +20,9 @@ import { LandingComponent } from './landing/landing.component';
 import { StartComponent } from './start/start.component';
 import { IframeWidgetComponent } from './iframe-widget/iframe-widget.component';
 import {DialogModule} from 'primeng/dialog';
-import { MatDialogModule } from '@angular/material/dialog'; 
+import { MatDialogModule } from '@angular/material/dialog';
+import {SpeedDialModule} from 'primeng/speeddial';
+
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     FooterComponent,
     LandingComponent,
     StartComponent,
-    IframeWidgetComponent
+    IframeWidgetComponent,
+  
+    
   ],
   imports: [
     BrowserModule,
@@ -49,6 +53,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     TooltipModule,
     DialogModule,
     MatDialogModule,
+    SpeedDialModule,
   ],
   providers: [IframeWidgetComponent],
   bootstrap: [AppComponent]

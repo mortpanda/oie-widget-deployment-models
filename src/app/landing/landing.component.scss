@@ -1,7 +1,11 @@
 .lgMainDiv {
-  margin-top: 100px !important;
+  margin-top: 20% !important;
+  // top:100%!important; 
   height: auto !important;
   z-index: 1!important;
+
+  // border-style: dotted;
+  color: #FFFFFF;
 }
 
 .smMainDiv {
@@ -15,17 +19,20 @@
 .mainBtnDiv{
   // border-style: dotted;
   color:#FFFFFF!important;
-  width:80vw!important;
+  // width:80vw!important;
    text-align: center!important;
   
 }
 
 .btnItems{
-  // border-style: dotted;
+  // border-style:   dotted;
   color:#FFFFFF!important;
-  width:25%!important;
+  width:auto!important;
   padding-left:10px!important;
   padding-right:10px!important;
+  padding-left: 5vw!important;
+  // margin-bottom:40vh!important;
+  
 }
 
 .smbtnItems{
@@ -47,7 +54,22 @@
     background-color: #00297A!important;
     border-radius: 5px!important;
     padding: 10px!important;
-    // width:10%!important;
-    // height:100%!important;
+    
   }
+}
+
+#mainSpeedD{
+  margin-right: 1vw!important;
+  .p-speeddial{
+    position:relative;
+    .p-speeddial-button.p-button.p-button-icon-only {
+      width: 6rem;
+      height: 6rem;
+      border-width: 5px!important;
+  }
+  }
+}
+
+.mainBanner{
+  width: 40vw!important;
 }
