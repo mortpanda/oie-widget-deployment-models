@@ -5,6 +5,9 @@ import { OktaAuth } from '@okta/okta-auth-js';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { OktaConfigService } from '../shared/okta/okta-config.service';
 import { OktaGetTokenService } from '../shared/okta/okta-get-token.service';
+import { Location } from '@angular/common';
+// import { HostListener } from "@angular/core";
+
 @Component({
   selector: 'app-iframe-widget',
   templateUrl: './iframe-widget.component.html',
@@ -21,12 +24,22 @@ export class IframeWidgetComponent implements OnInit {
     private sanitizer: DomSanitizer,
     private OktaConfigService: OktaConfigService,
     private OktaGetTokenService: OktaGetTokenService,
-  ) { }
+    private location:Location,
+  ) { 
+    location.subscribe(val => console.log(val));
+  }
+
+//  @HostListener('window:resize', ['$event'])
+  //  onResize(event) {
+  //    event.target.innerWidth;
+  //    window.location.reload();
+  //  }
 
 
   async ngOnInit() {
-    this.strSafeSite = this.sanitizer.bypassSecurityTrustResourceUrl(this.OktaConfigService.strBaseURI + this.OktaConfigService.striFrameparams);
-    console.log(this.strSafeSite)
+    this.strSafeSite = await this.sanitizer.bypassSecurityTrustResourceUrl(this.OktaConfigService.strBaseURI + this.OktaConfigService.striFrameparams);
+    // console.log(this.strSafeSite);
+    // await alert(window.location.href)
   }
 
 

@@ -28,12 +28,14 @@ export class OktaWidgetService {
     return authenticated;
   }
 
-  async login(redirecturi, logo: boolean) {
-    const OktaClientID = this.OktaConfig.strClientID;
+  async login(redirecturi, clientid, strBrand?) {
+    // const OktaClientID = this.OktaConfig.strClientID;
+    const OktaClientID =  clientid;
     const OktaBaseURI = this.OktaConfig.strBaseURI;
     const OktaLang = this.OktaConfig.strLang;
     const OktaRedirect = redirecturi;
-    const OktaBrand = this.OktaConfig.strBrand;
+    // const OktaBrand = this.OktaConfig.strBrand;
+    const OktaBrand = strBrand;
     const OktaPostlogoutURI = this.OktaConfig.strPostLogoutURL;
     const OktaIssuer = this.OktaConfig.strIssuer;
     const OktaScope = this.OktaConfig.strScope;

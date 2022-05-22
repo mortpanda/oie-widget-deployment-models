@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 import { IframeWidgetComponent } from '../iframe-widget/iframe-widget.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MenuItem, MessageService } from 'primeng/api';
+import { MenuListService } from '../shared/menu-items/menu-list.service';
+
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -23,9 +25,10 @@ export class LandingComponent implements OnInit {
   smallScreen: boolean;
 
   displayModal: boolean;
-  displayResponsive:boolean;
+  displayResponsive: boolean;
 
-  items: MenuItem[];
+  appNav: MenuItem[];
+
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -33,15 +36,18 @@ export class LandingComponent implements OnInit {
     private OktaConfigService: OktaConfigService,
     private OktaSDKAuthService: OktaSDKAuthService,
     private _router: Router,
-    private IframeWidgetComponent:IframeWidgetComponent,
-    public _matdialog: MatDialog,
+    // private IframeWidgetComponent: IframeWidgetComponent,
+    // private _matdialog: MatDialog,
+    private MenuListService: MenuListService,
   ) {
+    
     breakpointObserver.observe([
       Breakpoints.XSmall,
       Breakpoints.Small
     ]).subscribe(result => {
       this.smallScreen = result.matches;
     });
+    this.appNav = this.MenuListService.appNav;
   }
 
   @HostListener('window:resize', ['$event'])
@@ -53,28 +59,7 @@ export class LandingComponent implements OnInit {
   async ngOnInit() {
     // await this.OktaWidgetService.CloseWidget();
     // await this.OktaWidgetService.login(this.OktaConfigService.strRedirectURL,true);
-    this.items = [
-      {
-        icon: 'pi pi-external-link',
-        url: 'http://angular.io'
 
-      },
-      {
-        icon: 'pi pi-external-link',
-        url: 'http://angular.io'
-
-      },
-      {
-        icon: 'pi pi-external-link',
-        url: 'http://angular.io'
-
-      },
-      {
-        icon: 'pi pi-external-link',
-        url: 'http://angular.io'
-
-      }
-    ];
   }
 
   test() {
@@ -82,24 +67,24 @@ export class LandingComponent implements OnInit {
   }
 
 
-  async signInHosted() {    
-      await this.HostedAuthService.closeSession();
-      await this.HostedAuthService.signInWithRedirect(); 
-  }
+  // async signInHosted() {
+  //   await this.HostedAuthService.closeSession();
+  //   await this.HostedAuthService.signInWithRedirect();
+  // }
 
-  async openiFrameModal(){
-    await this.HostedAuthService.closeSession();
-    const WidgetDialogConfig = new MatDialogConfig();
-    WidgetDialogConfig.disableClose = false;
-    WidgetDialogConfig.id = "iframe-modal-component";
-    // WidgetDialogConfig.height = "700px";
-    // WidgetDialogConfig.width = "450px";
-    WidgetDialogConfig.width = "80vw";
-    const modalDialog = this._matdialog.open(IframeWidgetComponent, WidgetDialogConfig);
-  }
+  // async openiFrameModal() {
+  //   await this.HostedAuthService.closeSession();
+  //   const WidgetDialogConfig = new MatDialogConfig();
+  //   WidgetDialogConfig.disableClose = false;
+  //   WidgetDialogConfig.id = "iframe-modal-component";
+  //   // WidgetDialogConfig.height = "700px";
+  //   // WidgetDialogConfig.width = "450px";
+  //   WidgetDialogConfig.width = "80vw";
+  //   const modalDialog = this._matdialog.open(IframeWidgetComponent, WidgetDialogConfig);
+  // }
 
 
-//   showModalDialog() {
-//     this.displayResponsive = true;
-// }
+  //   showModalDialog() {
+  //     this.displayResponsive = true;
+  // }
 }
