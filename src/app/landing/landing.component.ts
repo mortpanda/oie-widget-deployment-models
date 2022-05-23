@@ -50,11 +50,11 @@ export class LandingComponent implements OnInit {
     this.appNav = this.MenuListService.appNav;
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    event.target.innerWidth;
-    window.location.reload();
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event) {
+  //   event.target.innerWidth;
+  //   window.location.reload();
+  // }
 
   async ngOnInit() {
     // await this.OktaWidgetService.CloseWidget();

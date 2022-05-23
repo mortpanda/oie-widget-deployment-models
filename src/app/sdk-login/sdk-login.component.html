@@ -1,5 +1,11 @@
+<script src="https://global.oktacdn.com/okta-signin-widget/6.2.1/js/okta-sign-in.min.js"
+  type="text/javascript"></script>
+  <link href="https://global.oktacdn.com/okta-signin-widget/6.2.1/css/okta-sign-in.min.css" type="text/css"
+  rel="stylesheet" />
+
+
 <ng-template #bigScreen>
-  <p-card id="sdkCard">
+  <p-card id="sdkCard" id="loginpage">
     <div class="sdkMainDiv">
 
       <div class="sdkBannerDiv">
@@ -21,16 +27,46 @@
       <p-divider></p-divider>
 
       <div class="loginBtnDiv">
-        <p-button label="ログイン" iconPos="right" icon="pi pi-sign-in" id="loginBtn"></p-button>
+        <p-button label="ログイン" iconPos="right" icon="pi pi-sign-in" id="loginBtn" (click)="Login()"></p-button>
       </div>
 
     </div>
+    
   </p-card>
+  <div id="okta-widget-container"></div>
 </ng-template>
 
 <!-- ************************* SMALL SCREEN ************************* -->
 <!-- ************************* SMALL SCREEN ************************* -->
 
 <ng-template [ngIf]="smallScreen" [ngIfElse]="bigScreen">
+  <p-card id="sdkCard" id="loginpage">
+    <div class="sdkMainDiv">
 
+      <div class="sdkBannerDiv">
+        <img src="assets/img/okta_japan_logo_blue_medium.png" class="sdkBanner">
+      </div>
+
+      <p-divider align="center">
+        <img src="assets/img/okta_security_blue_medium.png" class="imgSec">
+      </p-divider>
+
+      <div class="userNameDiv">
+        <input type="float-input" type="text" pInputText [(ngModel)]="strUsername" placeholder="ユーザー名" id="strUserName">
+      </div>
+
+      <div class="pwDiv">
+        <p-password [(ngModel)]="strPassword" [feedback]="false" [toggleMask]="true" placeholder="パスワード"
+          id="strPassword"></p-password>
+      </div>
+      <p-divider></p-divider>
+
+      <div class="loginBtnDiv">
+        <p-button label="ログイン" iconPos="right" icon="pi pi-sign-in" id="loginBtn" (click)="Login()"></p-button>
+      </div>
+
+    </div>
+    
+  </p-card>
+  <div id="okta-widget-container"></div>
 </ng-template>

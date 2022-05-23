@@ -218,11 +218,11 @@ export class MenuListService {
     const WidgetDialogConfig = new MatDialogConfig();
     WidgetDialogConfig.disableClose = false;
     WidgetDialogConfig.id = "sdk-modal-component";
-    // WidgetDialogConfig.height = "auto";
-    // WidgetDialogConfig.width = "auto";
+    WidgetDialogConfig.height = "auto";
+    WidgetDialogConfig.width = "auto";
 
-    WidgetDialogConfig.height = "550px";
-    WidgetDialogConfig.width = "450px";
+    // WidgetDialogConfig.height = "550px";
+    // WidgetDialogConfig.width = "450px";
 
     const modalDialog = this._matdialog.open(SdkLoginComponent, WidgetDialogConfig);
   }

@@ -28,9 +28,31 @@ export class SdkLoginComponent implements OnInit {
     ]).subscribe(result => {
       this.smallScreen = result.matches;
     });
-   }
+  }
 
   ngOnInit(): void {
   }
+
+  async Login() {
+
+
+    try {
+      var username = this.strUsername;
+      var password = this.strPassword;
+
+      // console.log(username);
+      // console.log(password)
+
+      await this.OktaAuthenticationService.login(username, password);
+
+
+    } catch (err) {
+      //alert(this.authService.strstateToken)     
+      console.log(err)
+      // this.loginInvalid = true;
+    }
+
+  }
+
 
 }
