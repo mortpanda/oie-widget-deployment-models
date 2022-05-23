@@ -1,0 +1,36 @@
+<ng-template #bigScreen>
+  <p-card id="sdkCard">
+    <div class="sdkMainDiv">
+
+      <div class="sdkBannerDiv">
+        <img src="assets/img/okta_japan_logo_blue_medium.png" class="sdkBanner">
+      </div>
+
+      <p-divider align="center">
+        <img src="assets/img/okta_security_blue_medium.png" class="imgSec">
+      </p-divider>
+
+      <div class="userNameDiv">
+        <input type="float-input" type="text" pInputText [(ngModel)]="strUsername" placeholder="ユーザー名" id="strUserName">
+      </div>
+
+      <div class="pwDiv">
+        <p-password [(ngModel)]="strPassword" [feedback]="false" [toggleMask]="true" placeholder="パスワード"
+          id="strPassword"></p-password>
+      </div>
+      <p-divider></p-divider>
+
+      <div class="loginBtnDiv">
+        <p-button label="ログイン" iconPos="right" icon="pi pi-sign-in" id="loginBtn"></p-button>
+      </div>
+
+    </div>
+  </p-card>
+</ng-template>
+
+<!-- ************************* SMALL SCREEN ************************* -->
+<!-- ************************* SMALL SCREEN ************************* -->
+
+<ng-template [ngIf]="smallScreen" [ngIfElse]="bigScreen">
+
+</ng-template>

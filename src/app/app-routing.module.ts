@@ -4,6 +4,7 @@ import { LandingComponent } from './landing/landing.component';
 import { StartComponent } from './start/start.component';
 // import { CustomWidgetComponent } from './custom-widget/custom-widget.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: LandingComponent },

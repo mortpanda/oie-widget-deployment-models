@@ -1,0 +1,76 @@
+#strUserName {
+  font-family: "ABCWhyte Book", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu",
+    "Cantarell", "Helvetica Neue", sans-serif !important;
+  color: #6e6e78 !important;
+  width:100%!important;
+}
+
+#strPassword {
+  .p-input-icon-right > i:last-of-type{
+  color: #6e6e78 !important;
+  
+}
+  .p-inputtext,
+  .p-password {
+    font-family: "ABCWhyte Book", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu",
+      "Cantarell", "Helvetica Neue", sans-serif !important;
+    color: #6e6e78 !important;
+    width:100%!important;
+  }
+}
+
+
+.sdkMainDiv{
+//  background-color: #00297A!important;
+  // padding:20px!important;
+  // text-align: center!important;
+}
+
+.sdkBannerDiv{
+  // border-style: dotted;
+  width:100%!important;
+}
+
+.sdkBanner{
+  // border-style: dotted;
+  width:100%!important; 
+}
+
+.userNameDiv{
+  margin-top:30px!important;
+  text-align: center!important;
+}
+
+.pwDiv{
+  margin-top:30px!important;
+  text-align: center!important; 
+  margin-bottom:30px!important;
+}
+
+.imgSec{
+  width:50px!important;
+}
+
+.loginBtnDiv{
+  text-align: center!important;
+}
+
+#loginBtn{
+  .p-button{
+  background-color: #00297A!important;
+  padding:20px!important;
+  width:150px!important;
+}
+}
+
+.mat-dialog-container {
+  
+  padding: 24px!important;
+  
+}
+
+#sdkCard{
+  .p-card{
+  height: 100%!important;
+}
+}

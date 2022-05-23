@@ -7,6 +7,7 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 // import {OktaWidgetService} from '../../shared/okta/okta-widget.service';
 import { DefaultWidgetComponent } from '../../default-widget/default-widget.component';
 import { CustomWidgetComponent } from '../../custom-widget/custom-widget.component';
+import { SdkLoginComponent } from '../../sdk-login/sdk-login.component';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,7 @@ export class MenuListService {
     // private OktaWidgetService:OktaWidgetService,
     private DefaultWidgetComponent: DefaultWidgetComponent,
     private CustomWidgetComponent: CustomWidgetComponent,
+    private SdkLoginComponent:SdkLoginComponent,
   ) { }
 
   appNav = [
@@ -62,6 +64,18 @@ export class MenuListService {
       icon: 'pi pi-cog',
       command: () => {
         this.openCustomWidgetModal();
+      }
+    },
+
+    // openSDKModal
+    {
+      tooltipOptions: {
+        tooltipLabel: "SDKとのハイブリッド式",
+        tooltipPosition: "top",
+      },
+      icon: 'pi pi-android',
+      command: () => {
+        this.openSDKModal();
       }
     },
   ];
@@ -107,7 +121,7 @@ export class MenuListService {
       style: 'font-size: 0.7rem',
       url: 'https://twitter.com/okta_japan',
     },
-
+    
   ];
 
   SmallMenu = [
@@ -198,4 +212,18 @@ export class MenuListService {
     const modalDialog = this._matdialog.open(CustomWidgetComponent, WidgetDialogConfig);
   }
 
+  
+  async openSDKModal() {
+    await this.HostedAuthService.closeSession();
+    const WidgetDialogConfig = new MatDialogConfig();
+    WidgetDialogConfig.disableClose = false;
+    WidgetDialogConfig.id = "sdk-modal-component";
+    // WidgetDialogConfig.height = "auto";
+    // WidgetDialogConfig.width = "auto";
+
+    WidgetDialogConfig.height = "550px";
+    WidgetDialogConfig.width = "450px";
+
+    const modalDialog = this._matdialog.open(SdkLoginComponent, WidgetDialogConfig);
+  }
 }

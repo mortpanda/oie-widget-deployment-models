@@ -25,9 +25,11 @@ import { SpeedDialModule } from 'primeng/speeddial';
 import { ToastModule } from 'primeng/toast';
 import { DefaultWidgetComponent } from './default-widget/default-widget.component';
 import { CustomWidgetComponent } from './custom-widget/custom-widget.component';
-
-
-
+import { SdkLoginComponent } from './sdk-login/sdk-login.component';
+import {PasswordModule} from 'primeng/password';
+import {FormsModule} from '@angular/forms';
+import {CardModule} from 'primeng/card';
+import {DividerModule} from 'primeng/divider';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { CustomWidgetComponent } from './custom-widget/custom-widget.component';
     IframeWidgetComponent,
     DefaultWidgetComponent,
     CustomWidgetComponent,
+    SdkLoginComponent,
 
 
 
@@ -62,8 +65,12 @@ import { CustomWidgetComponent } from './custom-widget/custom-widget.component';
     MatDialogModule,
     SpeedDialModule,
     ToastModule,
+    PasswordModule,
+    FormsModule,
+    CardModule,
+    DividerModule,
   ],
-  providers: [IframeWidgetComponent, DefaultWidgetComponent, CustomWidgetComponent],
+  providers: [IframeWidgetComponent, DefaultWidgetComponent, CustomWidgetComponent,SdkLoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
