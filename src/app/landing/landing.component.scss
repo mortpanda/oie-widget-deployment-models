@@ -9,6 +9,8 @@
 }
 
 .smMainDiv {
+  // border-style: dotted;
+  // color: #ffffff !important;
   text-align: center !important;
   margin-top: 250px !important;
   height: auto;
@@ -22,8 +24,7 @@
 }
 
 .btnItems {
-  // border-style:   dotted;
-  color: #ffffff !important;
+  
   width: auto !important;
   padding-left: 10px !important;
   padding-right: 10px !important;
@@ -32,9 +33,12 @@
 }
 
 .smbtnItems {
+  border-style: dotted;
+  color: #ffffff !important;
   width: 100% !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
+  text-align: center !important;
 }
 
 #btnMain {
@@ -62,16 +66,22 @@
       height: 6rem !important;
       border-width: 5px !important;
     }
+    .p-speeddial-list{
+      // --item-diff-x:40px!important;
+      // --item-diff-y:40px!important;
+    }
   }
 }
 
 #mainSpeedD {
   .p-element {
     .p-speeddial-action {
-      width: 6rem !important;
-      height: 6rem !important;
+      width: 4rem !important;
+      height: 4rem !important;
     }
+    
   }
+  
 }
 
 #smmainSpeedD {
@@ -86,12 +96,32 @@
   }
 }
 
+#smmainSpeedD {
+  .p-element {
+    .p-speeddial-action {
+      width: 4rem !important;
+      height: 4rem !important;
+    }
+    
+  }
+  
+}
+
 .smbtn {
+  top:50%!important;
   width: 90% !important;
+  // border-style:   dotted;
+  // color: #ffffff !important;
+  text-align: center!important;
+  padding-bottom: 50%!important;
 }
 
 .mainBanner {
   width: 40vw !important;
+}
+
+.smBanner{
+  width: 90% !important;
 }
 
 .smmainBanner {

@@ -1,0 +1,83 @@
+
+// #custom-widget-modal-component{
+.mat-dialog-container {
+  // display: block;
+  padding: 0px!important;
+  
+}
+// }
+
+.WidgetBackDiv{
+  // background-color: #00297A!important;
+  background-image: url('/assets/img/mnt_asama_4.png')!important;
+}
+
+
+.auth-container,
+.main-container,
+.no-beacon {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.okta-form-title,
+.o-form-head {
+  color: #ffffff !important;
+}
+
+.okta-form-label,
+.o-form-label {
+  color: #ffffff !important;
+}
+
+#okta-sign-in .sign-in-with-device-option .separation-line:before {
+  border-top: none !important;
+}
+
+#okta-sign-in {
+  .separation-line {
+    background: transparent !important;
+    font-size: 13px;
+  }
+  .separation-line span {
+    color: #ffffff !important;
+    background: transparent !important;
+  }
+}
+
+
+#okta-sign-in .siw-main-footer .auth-footer .link{
+  color: #ffffff !important; 
+}
+
+
+ .okta-verify-authenticator {
+  background-image: url('/assets/img/panda.ico')!important;
+}
+
+
+.okta-form-infobox-error, .infobox, .infobox-error{
+  color: red !important;  
+}
+
+#okta-sign-in .auth-header{
+  border: none!important;
+}
+
+#okta-sign-in {
+   /* border-style: solid; */
+  border-width: 0px!important;
+  height: auto;
+  margin: 0px!important; 
+}
+
+#okta-sign-in.auth-container .button-primary {
+  color: #fff;
+  background-color: #00297A!important;
+   background: #00297A!important;
+}
+
+#okta-sign-in.auth-container .mfa-okta-verify {
+  // background-image: url(../img/icons/mfa/oktaVerify_70x70.png);
+  background-image: url('/assets/img/lion-logo.png')!important;
+}

@@ -24,6 +24,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { ToastModule } from 'primeng/toast';
 import { DefaultWidgetComponent } from './default-widget/default-widget.component';
+import { CustomWidgetComponent } from './custom-widget/custom-widget.component';
 
 
 
@@ -37,6 +38,7 @@ import { DefaultWidgetComponent } from './default-widget/default-widget.componen
     StartComponent,
     IframeWidgetComponent,
     DefaultWidgetComponent,
+    CustomWidgetComponent,
 
 
 
@@ -61,7 +63,7 @@ import { DefaultWidgetComponent } from './default-widget/default-widget.componen
     SpeedDialModule,
     ToastModule,
   ],
-  providers: [IframeWidgetComponent, DefaultWidgetComponent],
+  providers: [IframeWidgetComponent, DefaultWidgetComponent, CustomWidgetComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

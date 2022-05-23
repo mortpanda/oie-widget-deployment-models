@@ -5,7 +5,9 @@ import { OktaAuth } from '@okta/okta-auth-js';
 import { IframeWidgetComponent } from '../../iframe-widget/iframe-widget.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 // import {OktaWidgetService} from '../../shared/okta/okta-widget.service';
-import {DefaultWidgetComponent} from '../../default-widget/default-widget.component';
+import { DefaultWidgetComponent } from '../../default-widget/default-widget.component';
+import { CustomWidgetComponent } from '../../custom-widget/custom-widget.component';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,9 +19,10 @@ export class MenuListService {
     private IframeWidgetComponent: IframeWidgetComponent,
     private _matdialog: MatDialog,
     // private OktaWidgetService:OktaWidgetService,
-    private DefaultWidgetComponent:DefaultWidgetComponent,
+    private DefaultWidgetComponent: DefaultWidgetComponent,
+    private CustomWidgetComponent: CustomWidgetComponent,
   ) { }
-  
+
   appNav = [
     {
       tooltipOptions: {
@@ -39,16 +42,26 @@ export class MenuListService {
       icon: 'pi pi-desktop',
       command: () => {
         this.openiFrameModal();
-    }
+      }
     },
+    // {
+    //   tooltipOptions: {
+    //     tooltipLabel: "デフォルトのWidget",
+    //     tooltipPosition: "top",
+    //   },
+    //   icon: 'pi pi-box',
+    //   command: () => {
+    //     this.openDefaultWidgetModal();
+    //   }
+    // },
     {
       tooltipOptions: {
-        tooltipLabel: "デフォルトのWidget",
+        tooltipLabel: "カスタムのWidget",
         tooltipPosition: "top",
       },
-      icon: 'pi pi-box',
+      icon: 'pi pi-cog',
       command: () => {
-        this.openDefaultWidgetModal();
+        this.openCustomWidgetModal();
       }
     },
   ];
@@ -166,13 +179,23 @@ export class MenuListService {
   }
 
   async openDefaultWidgetModal() {
-    // await this.HostedAuthService.closeSession();
+    await this.HostedAuthService.closeSession();
     const WidgetDialogConfig = new MatDialogConfig();
     WidgetDialogConfig.disableClose = false;
     WidgetDialogConfig.id = "default-widget-modal-component";
     WidgetDialogConfig.height = "auto";
     WidgetDialogConfig.width = "auto";
     const modalDialog = this._matdialog.open(DefaultWidgetComponent, WidgetDialogConfig);
+  }
+
+  async openCustomWidgetModal() {
+    await this.HostedAuthService.closeSession();
+    const WidgetDialogConfig = new MatDialogConfig();
+    WidgetDialogConfig.disableClose = false;
+    WidgetDialogConfig.id = "custom-widget-modal-component";
+    WidgetDialogConfig.height = "auto";
+    WidgetDialogConfig.width = "auto";
+    const modalDialog = this._matdialog.open(CustomWidgetComponent, WidgetDialogConfig);
   }
 
 }
