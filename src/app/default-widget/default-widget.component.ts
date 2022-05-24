@@ -22,5 +22,8 @@ export class DefaultWidgetComponent implements OnInit {
 
   }
 
+  async ReloadPage(){
+    await window.location.replace(this.OktaConfigService.strPostLogoutURL);
+  }
 
 }

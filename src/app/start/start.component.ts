@@ -58,6 +58,7 @@ export class StartComponent implements OnInit {
   }
 
   async GoToHome(){
+    await this.authService.closeSession();
     this.Router.navigate(['/home']);
   }
 

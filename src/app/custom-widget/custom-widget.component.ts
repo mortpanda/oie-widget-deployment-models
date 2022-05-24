@@ -3,6 +3,7 @@ import {OktaWidgetService} from '../shared/okta/okta-widget.service';
 import { OktaConfigService } from '../shared/okta/okta-config.service';
 import { ViewEncapsulation } from '@angular/core';
 
+
 @Component({
   selector: 'app-custom-widget',
   templateUrl: './custom-widget.component.html',
@@ -18,7 +19,11 @@ export class CustomWidgetComponent implements OnInit {
 
   async ngOnInit() {
     await this.OktaWidgetService.CloseWidget();
-    await this.OktaWidgetService.login(this.OktaConfigService.strRedirectURL,this.OktaConfigService.strWidgetClientID);
+    await this.OktaWidgetService.login(this.OktaConfigService.strRedirectURL,this.OktaConfigService.strWidgetClientID,'assets/img/logo.png');
 
+  }
+
+  async ReloadPage(){
+    await window.location.replace(this.OktaConfigService.strPostLogoutURL);
   }
 }

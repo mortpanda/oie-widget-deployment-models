@@ -95,6 +95,7 @@
   color: #fff;
   background-color: #FF5733 !important;
    background: #FF5733 !important;
+   border-color:  #FF5733 !important;
 }
 
 #okta-sign-in.auth-container .mfa-okta-verify {
@@ -104,4 +105,41 @@
 
 #okta-sign-in.auth-container .mfa-okta-password {
   background-image: url('/assets/img/panda-logo.png')!important;
+}
+
+#okta-sign-in.auth-container h3 {
+   color: #FFFFFF!important;
+}
+
+#okta-sign-in.auth-container .okta-form-subtitle {
+  color: #FFFFFF!important;
+}
+
+#customSIWBack{
+  .p-button {
+    // background-color: #FF5733 !important;
+    padding: 5px !important;
+    width: 100px !important;
+    height:30px!important;
+  }
+}
+
+#customSIWBack{
+  .p-button:hover {
+    // background-color: #FF5733 !important;
+    background-color: transparent !important;
+    padding: 5px !important;
+    width: 100px !important;
+    height:30px!important;
+  }
+}
+
+
+.backbtnDiv{
+  padding:10px!important;
+}
+
+
+#okta-sign-in .auth-org-logo {
+  border-radius: 5px!important;
 }

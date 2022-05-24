@@ -46,16 +46,16 @@ export class MenuListService {
         this.openiFrameModal();
       }
     },
-    // {
-    //   tooltipOptions: {
-    //     tooltipLabel: "デフォルトのWidget",
-    //     tooltipPosition: "top",
-    //   },
-    //   icon: 'pi pi-box',
-    //   command: () => {
-    //     this.openDefaultWidgetModal();
-    //   }
-    // },
+    {
+      tooltipOptions: {
+        tooltipLabel: "デフォルトのWidget",
+        tooltipPosition: "top",
+      },
+      icon: 'pi pi-box',
+      command: () => {
+        this.openDefaultWidgetModal();
+      }
+    },
     {
       tooltipOptions: {
         tooltipLabel: "カスタムのWidget",
@@ -195,7 +195,7 @@ export class MenuListService {
   async openDefaultWidgetModal() {
     await this.HostedAuthService.closeSession();
     const WidgetDialogConfig = new MatDialogConfig();
-    WidgetDialogConfig.disableClose = false;
+    WidgetDialogConfig.disableClose = true;
     WidgetDialogConfig.id = "default-widget-modal-component";
     WidgetDialogConfig.height = "auto";
     WidgetDialogConfig.width = "auto";
@@ -205,7 +205,7 @@ export class MenuListService {
   async openCustomWidgetModal() {
     await this.HostedAuthService.closeSession();
     const WidgetDialogConfig = new MatDialogConfig();
-    WidgetDialogConfig.disableClose = false;
+    WidgetDialogConfig.disableClose = true;
     WidgetDialogConfig.id = "custom-widget-modal-component";
     WidgetDialogConfig.height = "auto";
     WidgetDialogConfig.width = "auto";
@@ -226,4 +226,8 @@ export class MenuListService {
 
     const modalDialog = this._matdialog.open(SdkLoginComponent, WidgetDialogConfig);
   }
+
+  
+ 
+
 }

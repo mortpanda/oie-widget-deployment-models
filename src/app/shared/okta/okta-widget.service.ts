@@ -28,7 +28,7 @@ export class OktaWidgetService {
     return authenticated;
   }
 
-  async login(redirecturi, clientid, strBrand?) {
+  async login(redirecturi, clientid, logoPath?, strBrand?) {
     // const OktaClientID = this.OktaConfig.strClientID;
     const OktaClientID =  clientid;
     const OktaBaseURI = this.OktaConfig.strBaseURI;
@@ -44,7 +44,7 @@ export class OktaWidgetService {
     const OktaPKCE = this.OktaConfig.strPkce;
     // const OktaWidgetLogo = this.OktaConfig.strLogo;
     var oktaSignIn = new OktaSignIn({
-      // logo: OktaWidgetLogo,
+      logo: logoPath,
       clientId: OktaClientID,
       baseUrl: OktaBaseURI,
       language: OktaLang,

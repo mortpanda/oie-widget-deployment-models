@@ -1,44 +1,55 @@
-.mainDiv{
+.mainDiv {
   // border-style: dotted;
-  color:#FFFFFF;
-  
-  margin-top: 20vh!important;
-  width: 85vw!important;
-  height:55vh!important;
-  text-align: center!important;
-  
+  color: #ffffff;
+
+  margin-top: 20vh !important;
+  width: 85vw !important;
+  height: 55vh !important;
+  text-align: center !important;
 }
 
-.userNameDiv{
-  margin-top: 30px!important;
-  margin-bottom: 30px!important;
+.userNameDiv {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 
-.userName{
-  
-  padding-right: 50px!important;
-  padding-left: 50px!important;
+.userName {
+  padding-right: 50px !important;
+  padding-left: 50px !important;
   font-family: "ABCWhyte Book", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu",
-  "Cantarell", "Helvetica Neue", sans-serif!important;
-  
-  font-size: 20px!important;
-  font-weight: 800!important;
+    "Cantarell", "Helvetica Neue", sans-serif !important;
+
+  font-size: 20px !important;
+  font-weight: 800 !important;
 }
 
-#starHome{
-  .p-button{
-    text-align: center!important;
-    background-color: #00297A!important;
+#starHome {
+  .p-button {
+    text-align: center !important;
+    background-color: #00297a !important;
     // width: 20vw!important;
-    height: 10vh!important;
-    padding-right: 50px!important;
-    padding-left: 50px!important;
+    height: 10vh !important;
+    padding-right: 50px !important;
+    padding-left: 50px !important;
     font-family: "ABCWhyte Book", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu",
-    "Cantarell", "Helvetica Neue", sans-serif!important;
+      "Cantarell", "Helvetica Neue", sans-serif !important;
   }
 }
 
-.btnImage{
-  text-align: center!important;
-  height:7vh!important;
+.btnImage {
+  text-align: center !important;
+  height: 7vh !important;
 }
+
+.startBannerDiv {
+  text-align: center !important;
+}
+
+.startBanner {
+  width: 50vw !important;
+}
+
+.homeBtnDiv{
+  text-align: center !important;  
+}
+

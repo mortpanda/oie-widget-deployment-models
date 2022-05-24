@@ -78,6 +78,11 @@
     .p-speeddial-action {
       width: 4rem !important;
       height: 4rem !important;
+      -webkit-backdrop-filter: blur(6px) !important;
+      backdrop-filter: blur(6px) !important;
+      background: transparent !important;
+      border: solid #ffffff;
+      
     }
     
   }
