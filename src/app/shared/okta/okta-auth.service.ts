@@ -33,7 +33,7 @@ export class OktaSDKAuthService {
       clientId: this.OktaConfigService.strClientID,
       issuer: this.OktaConfigService.strIssuer,
       redirectUri: this.OktaConfigService.strHostedRedirect,
-      postLogoutRedirectUri:this.OktaConfigService.strPostLogoutURL,
+      // postLogoutRedirectUri:this.OktaConfigService.strPostLogoutURL,
       // responseMode: this.OktaConfigService.strResponseMode,
       // responseType: this.OktaConfigService.strResponseType,
       scopes: this.OktaConfigService.strScope,

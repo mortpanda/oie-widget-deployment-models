@@ -14,6 +14,7 @@ import { SdkLoginComponent } from '../../sdk-login/sdk-login.component';
 })
 export class MenuListService {
   public HostedAuthService = new OktaAuth(this.OktaSDKAuthService.HostedConfig);
+  public AuthService = new OktaAuth(this.OktaSDKAuthService.config);
   constructor(
     private OktaSDKAuthService: OktaSDKAuthService,
     private OktaConfigService: OktaConfigService,
@@ -179,6 +180,7 @@ export class MenuListService {
   async signInHosted() {
     await this.HostedAuthService.closeSession();
     await this.HostedAuthService.signInWithRedirect();
+    
   }
 
   async openiFrameModal() {
