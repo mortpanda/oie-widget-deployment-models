@@ -32,7 +32,7 @@ export class LandingComponent implements OnInit {
     private _router: Router,
     private MenuListService: MenuListService,
   ) {
-    
+
     breakpointObserver.observe([
       Breakpoints.XSmall,
       Breakpoints.Small
@@ -42,15 +42,8 @@ export class LandingComponent implements OnInit {
     this.appNav = this.MenuListService.appNav;
   }
 
-  
-
   async ngOnInit() {
-this.authService.closeSession();
+    this.authService.closeSession();
   }
-
-  test() {
-    alert('test')
-  }
-
 
 }

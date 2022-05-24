@@ -38,8 +38,6 @@ export class IframeWidgetComponent implements OnInit {
 
   async ngOnInit() {
     this.strSafeSite = await this.sanitizer.bypassSecurityTrustResourceUrl(this.OktaConfigService.strBaseURI + this.OktaConfigService.striFrameparams);
-    // console.log(this.strSafeSite);
-    // await alert(window.location.href)
   }
 
 
